@@ -25,9 +25,8 @@ class Person {
 
 
     public function __destruct(){
-        
-            $this->lastName . " " .
-            $this->age;
+        echo "<br><br>DESTR : <br>", $this->name;
+          
     }
 
     

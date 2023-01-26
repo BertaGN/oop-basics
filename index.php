@@ -2,5 +2,7 @@
 require_once("person.php");
 
 $Berta = new Person("Berta", "Garcia", 29);
-echo $Berta->getName();
+echo "Name : " . $Berta->getName() . "<br>";
+echo "Last Name : " . $Berta->getLastName() . "<br>";
+echo "Age : " . $Berta->getAge() . "<br>";
 ?>
