@@ -1,35 +1,29 @@
-<?php
-class Person {
-    private string $name;
-    private string $lastName;
 
-    private int $age;
-    
-    public function __construct($name, $lastName, $age){
+
+<?php
+
+require_once("interfacePerson.php");
+
+abstract class Person implements PersonIntf
+{
+    protected string $name;
+    protected string $lastName;
+    protected int $age;
+
+    public function __construct(string $name, string $lastName, int $age)
+    {
         $this->name = $name;
         $this->lastName = $lastName;
         $this->age = $age;
-       
-    }
-    public function getName(){
-        return $this->name;
     }
 
-    public function getLastName(){
-        return $this->lastName;
-    }
+    abstract public function getName();
 
-    public function getAge(){
-        return $this->age;
-    }
+    abstract public function getLastName();
 
+    abstract public function getAge();
 
-
-
-    
 }
 
 
 
-
-?>
